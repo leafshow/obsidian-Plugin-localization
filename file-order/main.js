@@ -29702,18 +29702,14 @@ var Wa = pt(require("obsidian")),
         }),
         new Wa.Setting(r)
           .setName("前缀数字最小长度")
-          .setDesc(
-            "如果前缀数字较短，将填充到该长度，例如：001 而不是 1",
-          )
+          .setDesc("如果前缀数字较短，将填充到该长度，例如：001 而不是 1")
           .addText((a) =>
             a
               .setValue(`${this.plugin.settings.prefixMinLength}`)
               .onChange(async (o) => {
                 let u = parseInt(o, 10);
                 if (Number.isNaN(u) || u < 0) {
-                  (new Wa.Notice(
-                    "前缀最小长度必须是大等于零的数字。",
-                  ),
+                  (new Wa.Notice("前缀最小长度必须是大等于零的数字。"),
                     a.setValue(`${this.plugin.settings.prefixMinLength}`));
                   return;
                 }
@@ -29723,9 +29719,7 @@ var Wa = pt(require("obsidian")),
           ),
         new Wa.Setting(r)
           .setName("分隔符")
-          .setDesc(
-            "前缀数字和标题之间的分隔符。可以是多个字符。",
-          )
+          .setDesc("前缀数字和标题之间的分隔符。可以是多个字符。")
           .addText((a) => {
             (a.setValue(this.getDelLabel()).onChange(async (o) => {
               o.startsWith("[") ||
@@ -29748,9 +29742,7 @@ var Wa = pt(require("obsidian")),
               .onChange(async (o) => {
                 let u = parseInt(o, 10);
                 if (Number.isNaN(u) || u < 0) {
-                  (new Wa.Notice(
-                    "起始索引必须是大等于零的数字。",
-                  ),
+                  (new Wa.Notice("起始索引必须是大等于零的数字。"),
                     a.setValue(`${this.plugin.settings.startingIndex}`));
                   return;
                 }
@@ -38479,7 +38471,7 @@ var Am = class extends ys.Plugin {
         this.app.workspace.on("file-menu", (r, a) => {
           var u;
           r.addItem((c) => {
-            c.setTitle("Reorder items")
+            c.setTitle("重新排序项目")
               .setIcon("arrow-up-down")
               .onClick(async () => {
                 let d = a != null ? a : this.app.vault.getRoot(),
@@ -38493,7 +38485,7 @@ var Am = class extends ys.Plugin {
           );
           o &&
             r.addItem((c) => {
-              c.setTitle("Fix name to ordering convention")
+              c.setTitle("将名称调整为符合排序规范")
                 .setIcon("check")
                 .onClick(async () => {
                   (await this.app.fileManager.renameFile(
