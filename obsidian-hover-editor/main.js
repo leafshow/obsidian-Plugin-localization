@@ -9672,7 +9672,7 @@ var Ur = class extends Hr {
                   : (E.addItem((O) => {
                       var T, _;
                       (_ = (T = O.setIcon("popup-open")
-                        .setTitle("Open in Hover Editor")
+                        .setTitle("在悬停编辑器中打开")
                         .onClick(async () => {
                           let H = o.spawnPopover(),
                             { autoFocus: j } = o.settings;
@@ -9690,7 +9690,7 @@ var Ur = class extends Hr {
                     E.addItem((O) => {
                       var T, _;
                       (_ = (T = O.setIcon("popup-open")
-                        .setTitle("Convert to Hover Editor")
+                        .setTitle("转换为悬停编辑器")
                         .onClick(() => {
                           o.convertLeafToPopover(this.leaf);
                         })).setSection) == null || _.call(T, "open");
@@ -9911,7 +9911,7 @@ var Ur = class extends Hr {
             o.addItem((E) => {
               var k, S;
               (S = (k = E.setIcon("popup-open")
-                .setTitle("Open in Hover Editor")
+                .setTitle("在悬停编辑器中打开")
                 .onClick(() => {
                   this.spawnPopover().openFile(c);
                 })).setSection) == null || S.call(k, "open");

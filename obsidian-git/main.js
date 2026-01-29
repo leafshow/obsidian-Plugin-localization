@@ -27332,7 +27332,7 @@ function h$(t, e, r) {
 function Yq(t, e) {
   e.addItem((r) =>
     r
-      .setTitle("Copy commit hash")
+      .setTitle("复制提交哈希")
       .setIcon("copy")
       .setSection("obs-git-line-author-copy")
       .onClick((n) => navigator.clipboard.writeText(t.hash)),
@@ -41007,7 +41007,7 @@ var Up = class extends we.Plugin {
       (typeof n == "string" ? (s = n) : (s = n.path),
       i == "file-explorer-context-menu" &&
         (r.addItem((o) => {
-          o.setTitle("Git: Stage")
+          o.setTitle("Git: 暂存")
             .setIcon("plus-circle")
             .setSection("action")
             .onClick((l) => {
@@ -41022,7 +41022,7 @@ var Up = class extends we.Plugin {
             });
         }),
         r.addItem((o) => {
-          o.setTitle("Git: Unstage")
+          o.setTitle("Git: 取消暂存")
             .setIcon("minus-circle")
             .setSection("action")
             .onClick((l) => {
@@ -41037,7 +41037,7 @@ var Up = class extends we.Plugin {
             });
         }),
         r.addItem((o) => {
-          o.setTitle("Git: Add to .gitignore")
+          o.setTitle("Git: 添加到 .gitignore")
             .setIcon("file-x")
             .setSection("action")
             .onClick((l) => {
@@ -41049,7 +41049,7 @@ var Up = class extends we.Plugin {
       i == "git-source-control")
     ) {
       r.addItem((l) => {
-        l.setTitle("Git: Add to .gitignore")
+        l.setTitle("Git: 添加到 .gitignore")
           .setIcon("file-x")
           .setSection("action")
           .onClick((u) => {
@@ -41062,7 +41062,7 @@ var Up = class extends we.Plugin {
       a === "obsidian-git:menu" &&
         o instanceof we.FileSystemAdapter &&
         (r.addItem((l) => {
-          l.setTitle("Open in default app")
+          l.setTitle("在默认应用程序中打开")
             .setIcon("arrow-up-right")
             .setSection("action")
             .onClick((u) => {
@@ -41070,7 +41070,7 @@ var Up = class extends we.Plugin {
             });
         }),
         r.addItem((l) => {
-          l.setTitle("Show in system explorer")
+          l.setTitle("在系统资源管理器中显示")
             .setIcon("arrow-up-right")
             .setSection("action")
             .onClick((u) => {

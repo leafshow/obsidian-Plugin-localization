@@ -38331,12 +38331,12 @@ var hW = (e, r, a) => {
             er.default.createElement(
               "button",
               { type: "button", onClick: o },
-              "Undo Changes",
+              "撤销更改",
             ),
             er.default.createElement(
               "button",
               { type: "button", onClick: u },
-              "Clear custom ordering",
+              "清理自定义排序",
             ),
             er.default.createElement(
               "button",
@@ -38434,7 +38434,7 @@ var yM = ({ parent: e, onComplete: r, defaults: a }) => {
       Jr.default.createElement(
         "button",
         { type: "button", className: "mod-cta", onClick: S },
-        "Apply changes",
+        "应用更改",
       ),
     ),
   );
