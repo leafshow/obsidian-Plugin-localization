@@ -13106,8 +13106,8 @@ class ConfirmationModal extends obsidian.Modal {
     let confirmationModal = this;
     const headerEl = contentEl.createEl("div", { text: this.confirmationNote });
     headerEl.addClass("modal-title");
-    this.confirmButton = contentEl.createEl("button", { text: "Confirm" });
-    const cancelButton = contentEl.createEl("button", { text: "Cancel" });
+    this.confirmButton = contentEl.createEl("button", { text: "确认" });
+    const cancelButton = contentEl.createEl("button", { text: "返回" });
     cancelButton.style.cssText = "float: right;";
     cancelButton.addEventListener("click", () => {
       confirmationModal.close();
@@ -13139,11 +13139,11 @@ class VaultChangeModal extends obsidian.Modal {
     // Header
     let headerText;
     if (this.action === "rename") {
-      headerText = "Rename: Provide a New Name";
+      headerText = "重命名：提供新名称";
     } else if (this.action === "create folder") {
-      headerText = "Create Folder: Provide Name";
+      headerText = "创建文件夹：请提供名称";
     } else if (this.action === "create note") {
-      headerText = "Create Note: Provide Name";
+      headerText = "创建笔记：请提供名称";
     }
     const headerEl = contentEl.createEl("div", { text: headerText });
     headerEl.addClass("modal-title");
@@ -13185,16 +13185,16 @@ class VaultChangeModal extends obsidian.Modal {
     // Buttons
     let changeButtonText;
     if (this.action === "rename") {
-      changeButtonText = "Change Name";
+      changeButtonText = "修改名字";
     } else if (this.action === "create folder") {
-      changeButtonText = "Create Folder";
+      changeButtonText = "创建文件夹";
     } else if (this.action === "create note") {
-      changeButtonText = "Create Note";
+      changeButtonText = "创建备注";
     }
     const changeButton = contentEl.createEl("button", {
       text: changeButtonText,
     });
-    const cancelButton = contentEl.createEl("button", { text: "Cancel" });
+    const cancelButton = contentEl.createEl("button", { text: "返回" });
     cancelButton.style.cssText = "float: right;";
     cancelButton.addEventListener("click", () => {
       myModal.close();
@@ -21109,7 +21109,7 @@ const triggerContextMenu = (params) => {
     menuItem.onClick((ev) => {
       let confirmationModal = new ConfirmationModal(
         plugin,
-        `Are you sure you want to delete the file "${file.basename}${file.extension === "md" ? "" : file.extension}"?`,
+        `你确定要删除文件吗 "${file.basename}${file.extension === "md" ? "" : file.extension}"?`,
         function () {
           let deleteOption = plugin.settings.deleteFileOption;
           let fileToDelete = plugin.app.vault.getAbstractFileByPath(file.path);
